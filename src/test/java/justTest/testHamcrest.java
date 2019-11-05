@@ -6,7 +6,11 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.*;
+//import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.MatcherAssert.assertThat;
+//import static org.hamcrest.core.IsIterableContaining.hasItems;
+import static org.junit.matchers.JUnitMatchers.*;
+
 
 public class testHamcrest {
     @Test
@@ -21,7 +25,7 @@ public class testHamcrest {
         arrayList.add("a");
         arrayList.add("b");
         arrayList.add("c");
-//        assertThat(arrayList,hasItems("a","c"));
+        assertThat(arrayList,hasItems("a","c"));
         System.out.println(arrayList.get(0)+","+arrayList.get(1));
     }
 

@@ -89,7 +89,8 @@ public class mainTest {
             TouchAction action =new TouchAction(driver);
 //            Thread.sleep(5000);
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-int i=0;
+
+            int i=0;
             while(true){
                 System.out.println(""+i++);
 
