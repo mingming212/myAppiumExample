@@ -27,7 +27,7 @@ public class testWebView {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("androidProcess", "com.ijourney.conbow");
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        capabilities.setCapability("chromedriverExecutableDir","/Users/helena.liu/Desktop/chromedriver");//没啥用啊，还是去默认路径下找
+        capabilities.setCapability("chromedriverExecutableDir","/Users/helena.liu/Desktop/chromedriver");//需要Appium 1.8.0以上才支持
         capabilities.setCapability("deviceName","123");
         capabilities.setCapability("appPackage","com.ijourney.conbow");
         capabilities.setCapability("appActivity","com.ijourney.conbow.MainActivity");
@@ -67,6 +67,7 @@ public class testWebView {
                 driver.context("WEBVIEW_com.ijourney.conbow");
                 System.out.println("---切换context成功！！！！");
                 System.out.println("现在使用的context：--------"+driver.getContext());
+                System.out.println("pagesource是html：  "+driver.getPageSource());
             }
         }
         WebElement e2= driver.findElementByCssSelector("div");
